@@ -304,6 +304,8 @@ head(res)
 ordered <- as.data.frame(res[order(res$padj),])
 ordered <- ordered %>% rownames_to_column("miRNA")
 
+ordered 
+
 # export results
 write_csv(ordered, "output/all_samples/bg_20/PFAS_vs_Ctrl_statistical_results_bg20.csv")
 ```
